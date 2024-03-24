@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM application </title>
+    <style>
+body{
+    background-color:  #e4dbdb21;
+min-height: 100vh
+}
+.app-title{
+    text-align: center;
+
+}
+.container{
+    background-color: aqua;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.number-input{
+    width:80%;
+display: block;
+margin: 10px auto;
+font-size: 20px;
+}
+
+    </style>
 </head>
 <body>
-    Enter the side:<br/>
-    <input type="text" id="side"/><br/><br/>
+<h1 class="app-title">Area Calculator</h1>
+    <div class="container">
+    <input type="text" placeholder="Enter the side" class="number-input" id="side"/><br/><br/>
     <p id="answer">Answer:</p>
     <button type="button" onclick="calculatearea()">Calculate Area</button>
     <button type="button" onclick="resetarea()">Reset Area</button>
-
-<script>
-    const inputbox=document.getElementById("side");
-    const answertext = document.getElementById("answer");
-    function calculatearea(){
-   const val=parseInt(inputbox.value);
-   const area=val*val;
-   answertext.innerText=answer:${area};
-    }
-    function resetarea(){
-        inputbox.value="";
-        answertext.innerText="answer:";
-    }
-
-</script>
+</div>
 </body>
 </html>
