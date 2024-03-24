@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM application </title>
+</head>
+<body>
+    Enter the side:<br/>
+    <input type="text" id="side"/><br/><br/>
+    <p id="answer">Answer:</p>
+    <button type="button" onclick="calculatearea()">Calculate Area</button>
+    <button type="button" onclick="resetarea()">Reset Area</button>
+
+<script>
+    const inputbox=document.getElementById("side");
+    const answertext = document.getElementById("answer");
+    function calculatearea(){
+   const val=parseInt(inputbox.value);
+   const area=side*side;
+   answertext.innerText=('answer:${area}');
+    }
+    function resetarea(){
+        inputbox.value=" ";
+        answertext.innerText=('answer:');
+    }
+
+</script>
+</body>
+</html>
