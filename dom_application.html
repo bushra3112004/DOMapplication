@@ -1,43 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM application </title>
     <style>
-body{
-    background-color:  #e4dbdb21;
-min-height: 100vh
-}
-.app-title{
-    text-align: center;
+        body {
+            background-color: #fbda61;
+            background-image: linear-gradient(45deg,#fe8dc6 0%,#9a5afc 100%);
+            min-height: 100vh
+        }
 
-}
-.container{
-    background-color: aqua;
-    width: 300px;
-    display: block;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 10px;
-    
-}
-.number-input{
-    width:80%;
-display: block;
-margin: 10px auto;
-font-size: 20px;
-}
+        .app-title {
+            text-align: center;
+            color: white;
+            margin: 50px 100px;
+            padding-top: 100px;
+            font-size: 50px;
 
+        }
+
+        .container {
+            background-color:aliceblue;
+            width: 300px;
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+        .number-input {
+            width: 80%;
+            display: block;
+            margin: 20px auto;
+            font-size: 25px;
+        }
+       .answer {
+        text-align: center;
+        font-size: 26px;
+       margin-top: 5px;
+        }
+        .btn-calculator{
+            background-color: black;
+            color: white;
+            width:170px;
+            height: 30px;
+            display: block;
+            margin: 20px 68px ;
+            border-radius:20px;
+            font-size: 20px;
+        }
+        @media screen and (max-width:760px) {
+            .container{
+                width: 90%;
+            }
+        }
     </style>
 </head>
+
 <body>
-<h1 class="app-title">Area Calculator</h1>
+    <h1 class="app-title">Area Calculator</h1>
     <div class="container">
-    <input type="text" placeholder="Enter the side" class="number-input" id="side"/><br/><br/>
-    <p id="answer">Answer:</p>
-    <button type="button" onclick="calculatearea()">Calculate Area</button>
-    <button type="button" onclick="resetarea()">Reset Area</button>
-</div>
+        <input type="text" placeholder="Enter the side" class="number-input" id="side" /><br /><br />
+        <p class="answer" id="ans">Answer:</p>
+        <button type="button" onclick="calculatearea()" class="btn-calculator">Calculate </button>
+        <button type="button" onclick="resetarea()" class="btn-calculator">Reset </button>
+    </div>
+    <script>
+       // const inputBox = document.getElementById("side");
+        //const answertText = document.getElementById("ans");
+
+        function calculatearea() {
+            const val = document.getElementById("side");
+            const area = parseInt(val.value)*parseInt(val.value);
+            const answertText=document.getElementById("ans");
+            answertText.innerText = (`Answer : ${area} sq.unit`);
+        }
+
+        function resetarea() {
+           // inputBox.value = "";
+           // answertText.innerText = (`Answer:`);
+           const val = document.getElementById("side");
+            const answertText = document.getElementById("ans");
+           val.value="";
+        }
+    </script>
 </body>
+
 </html>
