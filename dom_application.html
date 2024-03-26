@@ -65,12 +65,14 @@
             .container{
                 width: 90%;
             }
+        
         }
-    </style>
+
+</style>
 </head>
 
 <body>
-    <h1 class="app-title">Area Calculator</h1>
+   <h1 class="app-title">  Square Area Calculator </h1>
     <div class="container">
         <input type="text" placeholder="Enter the side" class="number-input" id="side" /><br /><br />
         <p class="answer" id="ans">Area of Square:</p>
@@ -82,7 +84,7 @@
             const val = document.getElementById("side");
             const area = parseInt(val.value)*parseInt(val.value);
             const answertText=document.getElementById("ans");
-            answertText.innerText = (`Area of Square : ${area} sq.unit`);
+            answertText.innerText = `Area of Square : ${area} sq.unit>`;
         }
 
         function resetarea() {
